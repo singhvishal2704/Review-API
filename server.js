@@ -17,6 +17,10 @@ if (process.env.NODE_ENV === 'development') {
 app.use(express.json())
 app.use('/api/reviews', productRoutes)
 
+app.get('/', (req, res) => {
+  res.send({message: "API is Runnig..."})
+})
+
 
 app.use(notFound)
 app.use(errorHandler)
