@@ -12,6 +12,7 @@ exports.getProductReview = async (req, res) => {
         return res.send({
             status: 'NP000',
             message: "Data fetched successfully",
+            numberOfReviews: result.length, 
             data: result
         });
 
